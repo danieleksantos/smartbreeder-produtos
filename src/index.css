@@ -1,0 +1,15 @@
+:root {
+    --dark-blue: #051217;
+    --blue: #022329;
+    --light-blue: #a0bec2;
+    --sb-blue: #00b3c7;
+    --light-grey: #d2e0e2;
+    --sb-yellow: #f2f23d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
