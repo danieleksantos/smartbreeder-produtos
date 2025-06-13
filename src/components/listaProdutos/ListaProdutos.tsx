@@ -3,7 +3,7 @@ import { fetchProdutos } from '../../services/api';
 import type { Produto } from '../../types';
 import { CardProduto } from '../cardProdutos/CardProduto';
 import style from './listaProduto.module.css'
-import { ModalProduto} from '../modalProduto/ModalProduto'
+import { ModalProduto} from '../modalProduto/ModalProduto';
 
 
 export const ListaProdutos = () => {
