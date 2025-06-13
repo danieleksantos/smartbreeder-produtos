@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 5px;
   list-style: none;
-  padding: 2rem;
   margin: 0 auto;
+  border-right: 1px solid var(--light-grey)
 }

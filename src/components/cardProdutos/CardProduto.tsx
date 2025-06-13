@@ -1,6 +1,7 @@
 import styles from './cardProduto.module.css';
 import type { Produto } from '../../types';
 import { useFavorites } from '../../context/useFavorites';
+import { useCategoriaNome } from '../../hooks/useCategoriaNome'
 
 interface CardProdutoProps {
   produto: Produto;
@@ -9,7 +10,9 @@ interface CardProdutoProps {
 
 export function CardProduto({ produto, aoClicar }: CardProdutoProps) {
   const { favoritos, toggleFavorito } = useFavorites(); 
+  const { getNomes } = useCategoriaNome();
   const estaFavorito = favoritos.some((p) => p.id === produto.id);
+  const nomesCategorias = getNomes(produto.categorias);
 
   return (
     <li className={styles.cardProduto}>
@@ -24,7 +27,7 @@ export function CardProduto({ produto, aoClicar }: CardProdutoProps) {
       </p>
       <p className={styles.cardProdutoCategories}>
         <strong>Categorias: </strong>
-        {produto.categorias.join(', ')}
+        {nomesCategorias.join(', ')}
       </p>
       <div className={styles.cardProdutoActions}>
         <button

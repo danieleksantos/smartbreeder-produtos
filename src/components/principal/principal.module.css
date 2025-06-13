@@ -1,0 +1,20 @@
+.principal {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+}
+
+.produtos {
+  flex: 3;
+}
+
+.favoritos {
+  flex: 1;
+  max-width: 300px;
+}
+
+.favoritos :global(ul) {
+  overflow: visible;
+  height: auto;
+}

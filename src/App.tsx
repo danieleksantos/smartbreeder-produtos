@@ -1,12 +1,12 @@
-import { ListaProdutos } from './components/listaProdutos/ListaProdutos';
 import Header from './components/header/Header';
+import { Principal } from './components/principal/Principal';
 import './index.css'; 
 
 function App() {
   return (
     <div>
       <Header />
-      <ListaProdutos />
+      <Principal />
     </div>
   );
 }
