@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--dark-blue);
+  padding: 1rem;
+  border-bottom: 2px solid var(--sb-yellow);
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
+
+.headerFavorites {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerContador {
+  font-weight: bold;
+  color: var(--light-grey);
+}

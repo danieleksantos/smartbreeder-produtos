@@ -1,6 +1,6 @@
 import styles from './cardProduto.module.css';
 import type { Produto } from '../../types';
-import { useFavorites } from '../../context/useFavorites';
+import { useFavorites } from '../../hooks/useFavorites';
 import { useCategoriaNome } from '../../hooks/useCategoriaNome'
 
 interface CardProdutoProps {
