@@ -1,9 +1,45 @@
+.principalAbas {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.principalAbas button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--dark-blue);
+  border-top: none;
+  background-color: var(--sb-yellow);
+  cursor: pointer;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: var(--dark-blue);
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.principalAbas button:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.principalAbaAtiva {
+  background-color: white;
+  color: var(--dark-blue);
+  font-weight: bold;
+  position: relative;
+  top: -2px;
+  z-index: 1;
+  border-left: 1px solid var(--dark-blue);
+  border-right: 1px solid var(--dark-blue);
+  border-bottom: 2px solid var(--dark-blue);
+  border-top: none;
+}
+
 .principal {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .produtos {

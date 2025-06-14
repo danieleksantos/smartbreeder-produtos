@@ -13,3 +13,7 @@ body {
   background-color: var(--light-blue);
   color: var(--dark-blue);
 }
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}
