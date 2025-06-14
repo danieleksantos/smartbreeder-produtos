@@ -1,17 +1,24 @@
 .cardProduto {
+  display: flex;
+  flex-direction:column;
   background-color: var(--dark-blue);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   width: 250px;
   list-style-type: none;
-  
+  gap: 10px;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0;
 }
 
 .cardProdutoId{
   text-align: right;
-  padding-right: 5px;
+  padding: 0 5px 0 0;
   font-weight: bold;
   color: var(--sb-yellow);
 }
@@ -19,10 +26,11 @@
 .cardProdutoTitle {
   font-size: 1.25rem;
   color: var(--sb-blue);
+  margin: 0;
 }
 
 .cardProdutoDescription {
-  margin-top: 0.5rem;
+  margin-top: 10px;
   color: var(--light-grey);
 }
 
@@ -41,18 +49,12 @@
   border: none;
   color: var(--dark-blue);
   font-family: 'Montserrat', sans-serif;
-  padding: .5rem 1rem;
-  border-radius: 1rem;
-  margin-right: 5px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin: 10px 5px 0 0;
   font-weight: 700;
   cursor: pointer;
 }
 
-.cardProdutoBtnFavorite {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: red;
-}
+
 

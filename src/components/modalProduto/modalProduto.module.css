@@ -16,6 +16,13 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.modalProdutoBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+    
 .modalProdutoContent {
     position: relative;
     background-color: var(--light-blue);
@@ -36,6 +43,7 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 20px 15px 0 0;
 }
 
 .modalProdutoTitle {

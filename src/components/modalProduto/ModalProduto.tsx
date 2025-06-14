@@ -1,5 +1,6 @@
 import styles from './modalProduto.module.css';
 import type { Produto } from '../../types';
+import { BotaoFavorito } from '../botaoFavorito/BotaoFavorito';
 
 interface ModalProdutoProps {
   produto: Produto;
@@ -12,13 +13,17 @@ export function ModalProduto({ produto, onClose }: ModalProdutoProps) {
       <div className={styles.modalProdutoOverlay} onClick={onClose} />
 
       <div className={styles.modalProdutoContent} role="dialog" aria-modal="true">
-        <button
-          className={styles.modalProdutoBtnClose}
-          onClick={onClose}
-          aria-label="Fechar modal"
-        >
-          ×
-        </button>
+        <div className={styles.modalProdutoBtn}>
+          <BotaoFavorito produto={produto} />
+
+          <button
+            className={styles.modalProdutoBtnClose}
+            onClick={onClose}
+            aria-label="Fechar modal"
+          >
+           ×
+          </button>
+        </div>
 
         <h2 className={styles.modalProdutoTitle}>{produto.nome ? produto.nome : 'Nome desconhecido'}</h2>
         <p className={styles.modalProdutoDescription}>{produto.descricao}</p>

@@ -1,7 +1,7 @@
 import styles from './cardProduto.module.css';
 import type { Produto } from '../../types';
-import { useFavorites } from '../../hooks/useFavorites';
 import { useCategoriaNome } from '../../hooks/useCategoriaNome'
+import { BotaoFavorito } from '../botaoFavorito/BotaoFavorito';
 
 interface CardProdutoProps {
   produto: Produto;
@@ -9,9 +9,7 @@ interface CardProdutoProps {
 }
 
 export function CardProduto({ produto, aoClicar }: CardProdutoProps) {
-  const { favoritos, toggleFavorito } = useFavorites(); 
   const { getNomes } = useCategoriaNome();
-  const estaFavorito = favoritos.some((p) => p.id === produto.id);
   const nomesCategorias = getNomes(produto.categorias);
 
   return (
@@ -38,13 +36,7 @@ export function CardProduto({ produto, aoClicar }: CardProdutoProps) {
           Mais detalhes
         </button>
 
-        <button
-          className={styles.cardProdutoBtnFavorite}
-          onClick={() => toggleFavorito(produto)}
-          aria-label={`${estaFavorito ? 'Remover dos' : 'Adicionar aos'} favoritos`}
-        >
-          <i className={`fa${estaFavorito ? 's' : 'r'} fa-heart`}></i>
-        </button>
+        <BotaoFavorito produto={produto} />
       </div>
     </li>
   );
