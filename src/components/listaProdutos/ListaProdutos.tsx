@@ -13,11 +13,18 @@ interface ListaProdutosProps {
 export const ListaProdutos = ({ filtro }: ListaProdutosProps) => {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [produtoSelecionado, setProdutoSelecionado] = useState<Produto | null>(null);
+  const [paginaAtual, setPaginaAtual] = useState(1);
+
+  const itensPorPagina = 12;
   const { getNomes } = useCategoriaNome();
 
   useEffect(() => {
     fetchProdutos().then(setProdutos);
   }, []);
+
+  useEffect(() => {
+    setPaginaAtual(1);
+  }, [filtro]);
 
   const filtroNormalizado = filtro.toLowerCase().trim();
 
@@ -31,10 +38,21 @@ export const ListaProdutos = ({ filtro }: ListaProdutosProps) => {
     );
   });
 
+  const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
+  const indiceInicial = (paginaAtual - 1) * itensPorPagina;
+  const indiceFinal = indiceInicial + itensPorPagina;
+  const produtosPaginados = produtosFiltrados.slice(indiceInicial, indiceFinal);
+
+  const irParaPagina = (pagina: number) => {
+    if (pagina >= 1 && pagina <= totalPaginas) {
+      setPaginaAtual(pagina);
+    }
+  };
+
   return (
     <>
       <ul className={style.container}>
-        {produtosFiltrados.map((produto) => (
+        {produtosPaginados.map((produto) => (
           <CardProduto
             key={produto.id}
             produto={produto}
@@ -42,6 +60,22 @@ export const ListaProdutos = ({ filtro }: ListaProdutosProps) => {
           />
         ))}
       </ul>
+
+      {totalPaginas > 1 && (
+        <div className={style.paginacao}>
+          <button onClick={() => irParaPagina(paginaAtual - 1)} disabled={paginaAtual === 1}>
+            Anterior
+          </button>
+
+          <span>
+            Página {paginaAtual} de {totalPaginas}
+          </span>
+
+          <button onClick={() => irParaPagina(paginaAtual + 1)} disabled={paginaAtual === totalPaginas}>
+            Próxima
+          </button>
+        </div>
+      )}
 
       {produtoSelecionado && (
         <ModalProduto
