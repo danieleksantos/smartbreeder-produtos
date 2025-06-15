@@ -42,16 +42,8 @@
   padding: 0 10px 10px 10px;
 }
 
-.produtos {
-  flex: 3;
-}
-
-.favoritos {
-  flex: 1;
-  max-width: 300px;
-}
-
-.favoritos :global(ul) {
-  overflow: visible;
-  height: auto;
+h2 {
+  text-align: center;
+  color: var(--dark-blue);
+  text-transform: uppercase;
 }

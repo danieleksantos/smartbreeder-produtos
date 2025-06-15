@@ -14,6 +14,6 @@ body {
   color: var(--dark-blue);
 }
 
-button {
+button, input {
   font-family: 'Montserrat', sans-serif;
 }

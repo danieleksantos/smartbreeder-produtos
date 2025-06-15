@@ -13,7 +13,7 @@ export function FiltrarProdutos({ filtroNomeOuCategoria, onFiltrar }: FiltrarPro
 
   return (
     <div className={styles.filtrarProdutos}>
-      <label htmlFor="filtro" className={styles.filtrarProdutos__label}>
+      <label htmlFor="filtro" className={styles.filtrarProdutosLabel}>
         Buscar por nome ou categoria:
       </label>
       <input
@@ -21,8 +21,8 @@ export function FiltrarProdutos({ filtroNomeOuCategoria, onFiltrar }: FiltrarPro
         type="text"
         value={filtroNomeOuCategoria}
         onChange={handleChange}
-        className={styles.filtrarProdutos__input}
-        placeholder="Ex: Games ou Móvel"
+        className={styles.filtrarProdutosInput}
+        placeholder="Ex: Games ou Livro"
       />
     </div>
   );
