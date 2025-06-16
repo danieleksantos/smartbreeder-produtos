@@ -37,9 +37,8 @@
 .principal {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 15px;
-  margin-left:40px;
+  margin-left:20px;
 }
 
 h2 {

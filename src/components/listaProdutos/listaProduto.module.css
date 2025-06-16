@@ -1,11 +1,16 @@
+
 .container {
   display: grid;
-  justify-content:center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   list-style: none;
-  margin: 20px;
+  padding: 20px; 
+  max-width: 1200px;
+  margin: 0 auto; 
+  box-sizing: border-box; 
 }
+
+
 
 .paginacao {
   display: flex;
@@ -33,4 +38,22 @@
 .paginacao button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    gap: 15px;
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+    gap: 10px;
+  }
 }
