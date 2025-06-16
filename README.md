@@ -24,7 +24,7 @@ Esta aplicação web permite a exibição e manipulação de uma lista de produt
 
 A aplicação está disponível em produção através do Vercel:
 
-👉 [Acesse o deploy](https://seu-link-vercel.vercel.app/)
+👉 [Acesse o deploy](https://smartbreeder-produtos.vercel.app/)
 
 ---
 
