@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
+# 🛒 Teste Técnico - Desenvolvedora Front-End (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como parte do processo seletivo para a vaga de **Desenvolvedora Front-End na Smartbreeder**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Descrição da Aplicação
 
-## Expanding the ESLint configuration
+Esta aplicação web permite a exibição e manipulação de uma lista de produtos com as seguintes funcionalidades:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Exibição da lista de produtos a partir de dados mockados.
+- Simulação de requisição assíncrona com atraso utilizando **Promise** e **setTimeout**.
+- Tratamento de dados faltantes (ex.: produtos sem nome ou preço).
+- Favoritar e desfavoritar produtos com restrição de até dois favoritos por categoria.
+- Exibição de uma aba exclusiva com os produtos favoritados.
+- Modal para visualização de detalhes completos do produto, incluindo suas variações.
+- Filtros por nome e por categoria.
+- Contador de produtos favoritos exibido e atualizado em tempo real no **Header fixo**.
+- Paginação para navegação entre os produtos (extra).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Deploy
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A aplicação está disponível em produção através do Vercel:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+👉 [Acesse o deploy](https://seu-link-vercel.vercel.app/)
+
+---
+
+## 🧑‍💻 Tecnologias e Ferramentas
+
+- **React** (com Vite)
+- **TypeScript**
+- **CSS Modules**
+- **Context API** (para gerenciamento global de favoritos)
+- **Lucide React** (para ícones)
+- **Vercel** (hospedagem)
+
+---
+
+
+---
+
+## ✅ Requisitos Atendidos
+
+- [x] Exibição da lista de produtos
+- [x] Simulação de requisição assíncrona
+- [x] Tratamento de dados incompletos
+- [x] Favoritar/desfavoritar com regra de no máximo dois por categoria
+- [x] Aba/página de favoritos
+- [x] Modal com informações detalhadas e variações
+- [x] Filtro por nome e categoria
+- [x] Contador de favoritos atualizado em tempo real no Header
+- [x] Uso consistente de **TypeScript** com tipagens para produtos, categorias e contextos
+- [x] Paginação (extra)
+- [x] Cuidados básicos com acessibilidade (`aria-label`, roles)
+
+---
+
+## 🎨 Considerações de Estilo
+
+- As cores da aplicação foram definidas com base na **identidade visual da Smartbreeder**, utilizando **nomes de variáveis que refletem a nomenclatura das cores no site institucional da empresa**.
+- Estilo modularizado via **CSS Modules**, com nomenclatura baseada na metodologia **BEM** para melhor organização e manutenção.
+
+---
+
+## 📝 Decisões Técnicas
+
+- **Gerenciamento de estado global:** Utilização da **Context API** para centralizar os produtos favoritos e permitir seu acesso entre componentes distintos (Header, Lista de Produtos, Modal).
+- **Hooks personalizados:** Criação de hooks como `useFavorites` e `useCategoriaNome` para centralizar lógica reutilizável.
+- **Tipagem:** Toda manipulação de dados segue tipos declarados, reduzindo risco de erros de execução.
+- **Acessibilidade:** Inclusão de labels ARIA para melhorar a experiência de navegação por leitores de tela.
+
+---
+
+## 🛠️ Como Executar Localmente
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+2. Clone o repositório:
+npm install
+
+2. Rode o Projeto:
+npm run dev
+
+
+
