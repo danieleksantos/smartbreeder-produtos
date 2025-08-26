@@ -26,7 +26,7 @@ Esta aplicação web permite a exibição e manipulação de uma lista de produt
 
 A aplicação está disponível em produção através do Vercel:
 
-👉 [Acesse o deploy](https://smartbreeder-produtos.vercel.app/)
+👉 [Acesse o deploy](https://catalogo-de-produtos-ashen.vercel.app/)
 
 ---
 
@@ -83,7 +83,7 @@ A aplicação está disponível em produção através do Vercel:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/danieleksantos/smartbreeder-produtos.git
+git clone https://github.com/danieleksantos/catalogo-de-produtos.git
 
 2. Clone o repositório:
 npm install
