@@ -16,7 +16,9 @@ Esta aplicação web permite a exibição e manipulação de uma lista de produt
 - Modal para visualização de detalhes completos do produto, incluindo suas variações.
 - Filtros por nome e por categoria.
 - Contador de produtos favoritos exibido e atualizado em tempo real no **Header fixo**.
-- Paginação para navegação entre os produtos (extra).
+- Paginação para navegação entre os produtos.
+- Responsividade para diferentes tamanhos de tela (desktop, tablet e celular).
+
 
 ---
 
@@ -53,7 +55,8 @@ A aplicação está disponível em produção através do Vercel:
 - [x] Filtro por nome e categoria
 - [x] Contador de favoritos atualizado em tempo real no Header
 - [x] Uso consistente de **TypeScript** com tipagens para produtos, categorias e contextos
-- [x] Paginação (extra)
+- [x] Paginação
+- [x] Responsividade (tablet e mobile)
 - [x] Cuidados básicos com acessibilidade (`aria-label`, roles)
 
 ---
@@ -62,6 +65,7 @@ A aplicação está disponível em produção através do Vercel:
 
 - As cores da aplicação foram definidas com base na **identidade visual da empresa**, utilizando **nomes de variáveis que refletem a nomenclatura das cores no site institucional da empresa**.
 - Estilo modularizado via **CSS Modules**, com nomenclatura baseada na metodologia **BEM** para melhor organização e manutenção.
+- Responsividade: Foram aplicadas media queries para garantir uma boa experiência de navegação em celulares, tablets e desktops, adaptando o layout e os grids conforme o tamanho da tela.
 
 ---
 
@@ -71,6 +75,7 @@ A aplicação está disponível em produção através do Vercel:
 - **Hooks personalizados:** Criação de hooks como `useFavorites` e `useCategoriaNome` para centralizar lógica reutilizável.
 - **Tipagem:** Toda manipulação de dados segue tipos declarados, reduzindo risco de erros de execução.
 - **Acessibilidade:** Inclusão de labels ARIA para melhorar a experiência de navegação por leitores de tela.
+- **Responsividade:** Layout ajustado com CSS Grid e media queries, garantindo que o conteúdo se reorganize de forma fluida em diferentes tamanhos de tela.
 
 ---
 
