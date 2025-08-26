@@ -1,6 +1,6 @@
 # 🛒 Teste Técnico - Desenvolvedora Front-End (React + TypeScript)
 
-Projeto desenvolvido como parte do processo seletivo para a vaga de **Desenvolvedora Front-End na Smartbreeder**.
+Projeto desenvolvido como parte do processo seletivo para a vaga de **Desenvolvedora Front-End**.
 
 ---
 
@@ -60,7 +60,7 @@ A aplicação está disponível em produção através do Vercel:
 
 ## 🎨 Considerações de Estilo
 
-- As cores da aplicação foram definidas com base na **identidade visual da Smartbreeder**, utilizando **nomes de variáveis que refletem a nomenclatura das cores no site institucional da empresa**.
+- As cores da aplicação foram definidas com base na **identidade visual da empresa**, utilizando **nomes de variáveis que refletem a nomenclatura das cores no site institucional da empresa**.
 - Estilo modularizado via **CSS Modules**, com nomenclatura baseada na metodologia **BEM** para melhor organização e manutenção.
 
 ---
