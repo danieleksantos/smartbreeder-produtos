@@ -1,7 +1,6 @@
 # 🛒 Teste Técnico - Desenvolvedora Front-End (React + TypeScript)
 
-Projeto desenvolvido como parte do processo seletivo para a vaga de **Desenvolvedora Front-End**.
-
+Este projeto consiste em uma aplicação web desenvolvida em React e TypeScript para exibir e manipular uma lista de produtos, permitindo filtragem por nome e categoria, visualização detalhada em modal, favoritar produtos com limite por categoria e acompanhar favoritos em tempo real no Header. A aplicação simula requisições assíncronas, trata dados incompletos, oferece paginação, responsividade para diferentes dispositivos e cuidados básicos de acessibilidade, com gerenciamento de estado centralizado via Context API e estilo modularizado seguindo a metodologia BEM.
 ---
 
 ## 📌 Descrição da Aplicação
